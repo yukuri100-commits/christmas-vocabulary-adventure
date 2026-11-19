@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Christmas Vocabulary Adventure · 16 Words · V4</title>
+<style>
+:root{--cream:#fff7df;--gold:#ffe1a0;--red:#a92b36;--forest:#194f43}*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#102131;font-family:ui-rounded,"Trebuchet MS","Noto Sans TC",system-ui,sans-serif;color:var(--cream)}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:4px solid #fffbd0;outline-offset:2px}
+.shell{width:100vw;height:100dvh;display:flex;align-items:center;justify-content:center;background:#071725}
+.scene{position:relative;width:min(100vw,177.7778dvh);aspect-ratio:16/9;overflow:hidden;isolation:isolate;background:#31281f}
+#film,.fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
+.fallback{z-index:-2}#film{z-index:-1}.vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#172d3480,transparent 18%,transparent 78%,#10242a80);z-index:0}
+.top{position:absolute;z-index:8;top:1.5%;left:2%;right:2%;display:flex;justify-content:flex-end;align-items:start;gap:10px;pointer-events:none}
+.brand{display:flex;align-items:center;gap:.65em;pointer-events:none;background:#164936ef;border:2px solid #ffdf91;border-radius:22px;padding:.43em .78em;box-shadow:0 5px 0 #704128,0 5px 22px #0006;text-shadow:0 1px #683124;max-width:66%}
+.brand-symbol{font-size:clamp(15px,2.7vw,42px)}.brand b{display:block;font-size:clamp(13px,1.9vw,29px);line-height:1.1;letter-spacing:.01em}.brand small{display:block;font-size:clamp(9px,.85vw,14px);font-weight:700;color:#ffe7ae;letter-spacing:.05em;margin-top:2px}
+.controls{display:flex;gap:7px;pointer-events:auto;align-items:center}.control{border:2px solid #fae5b4;background:#173c35eF;color:#fff7e4;border-radius:40px;box-shadow:0 3px 0 #563120;min-height:38px;padding:7px 12px;font-weight:900;font-size:clamp(11px,1vw,17px);white-space:nowrap}.control[aria-pressed="true"]{background:#b33d36}
+#targets{position:absolute;inset:0;z-index:4;pointer-events:none}.spot{position:absolute;display:block;transform:translate(-50%,-50%);border:0;border-radius:42%;background:transparent;pointer-events:auto;touch-action:manipulation;padding:0;outline-offset:-2px}.spot::after{content:"";position:absolute;inset:2px;border:2px solid #ffdb70;border-radius:inherit;box-shadow:0 0 9px 3px #f6c64f,0 0 25px #fff4a7,inset 0 0 15px #ffe28277;opacity:0;transition:opacity .15s}.clues-on .spot::after,.spot:hover::after,.spot:focus-visible::after{opacity:1}.clues-on .spot::after{animation:pulse 1.7s ease-in-out infinite alternate}@keyframes pulse{to{box-shadow:0 0 18px 6px #f6c64f,0 0 36px #fff4a7,inset 0 0 17px #ffe28277}}
+.progress{position:absolute;right:2%;bottom:2%;z-index:8;padding:7px 13px;background:#133b35eD;border:1px solid #eed096;border-radius:30px;font-size:clamp(10px,1vw,17px);font-weight:850;pointer-events:none}.progress span{color:#ffdc73}
+.prompt{position:absolute;bottom:2%;left:50%;transform:translateX(-50%);z-index:6;border:1px solid #e7d299;background:#153e36eD;border-radius:30px;padding:7px 16px;white-space:nowrap;font-size:clamp(10px,1.05vw,16px);font-weight:800;pointer-events:none}
+.modal{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(5,18,25,.72);backdrop-filter:blur(3px);z-index:15;padding:3%}.modal.open{display:flex}.card{position:relative;max-height:94%;overflow:auto;overscroll-behavior:contain;width:min(490px,80%);min-width:290px;background:linear-gradient(140deg,#fffdf0,#fff1cd);border:6px solid #fff9eb;outline:3px solid #b63a3a;border-radius:26px;box-shadow:0 20px 50px #0009;text-align:center;color:#40251d;padding:clamp(12px,2vw,23px)}
+.card-kicker{color:#a12f2a;font-weight:900;font-size:clamp(10px,1vw,14px);letter-spacing:.1em}.illustration{margin:5px auto 3px;width:clamp(146px,22vw,240px);height:clamp(140px,25vh,235px);display:flex;align-items:center;justify-content:center;border-radius:17px;background:radial-gradient(ellipse at center,#fffaf0 10%,#f7e8c9 100%);border:2px solid #ead39d;overflow:hidden;padding:5px}.illustration img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 4px #79532333)}.word{font-size:clamp(24px,3.7vw,51px);line-height:1.05;margin:7px 0 4px;color:#a92b36;letter-spacing:-.025em}.translation{font-weight:900;font-size:clamp(16px,2vw,24px);margin:2px auto 9px}.sentence-box{border-radius:15px;background:#fffaf0;padding:12px 13px;border:1px solid #ecd4aa}.sentence{font-size:clamp(15px,1.7vw,21px);line-height:1.3;font-weight:850}.sentence-zh{font-size:clamp(12px,1.1vw,16px);line-height:1.4;color:#7a5b4a;margin-top:5px}.card-tools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px}.speak{border:0;border-radius:25px;background:#1c6552;color:white;font-size:clamp(13px,1.4vw,18px);font-weight:900;padding:10px 19px}.speak:nth-child(2){background:#ab3b37}.exit{position:absolute;right:9px;top:8px;background:#b32b2f;color:white;border:2px solid #fff4df;width:42px;height:42px;border-radius:50%;font-weight:900;font-size:26px;line-height:1}.completion{position:absolute;top:24%;left:50%;transform:translateX(-50%);z-index:10;display:none;text-align:center;background:#fff1c8;color:#3e3823;padding:15px 24px;border:4px solid #e9b560;border-radius:20px;box-shadow:0 10px 30px #0008;font-weight:900}.completion.show{display:block}
+@media(max-width:800px){.brand{max-width:58%;border-radius:12px;padding:5px 7px}.brand-symbol{display:none}.brand small{display:none}.controls{gap:3px}.control{padding:5px 8px;min-height:29px;border-width:1px}.card{width:min(440px,88%)}.prompt{bottom:1%;padding:4px 8px}.progress{bottom:1%;padding:4px 8px}}
+@media(max-width:480px){.brand b{font-size:11px}.control{font-size:10px}.prompt{display:none}.progress{font-size:10px}.card{max-height:98%;padding:10px}.illustration{width:clamp(105px,33vw,180px);height:clamp(95px,19vh,160px)}.word{margin-top:5px}.translation{margin-bottom:6px}.card-tools{margin-top:9px}}
+@media(prefers-reduced-motion:reduce){.clues-on .spot::after{animation:none}}
+</style></head>
+<body><div class="shell"><main class="scene" id="scene">
+<img class="fallback" src="poster.jpg" alt="Santa's Christmas Workshop" />
+<video id="film" src="christmas-workshop.mp4" poster="poster.jpg" autoplay loop muted playsinline preload="auto" aria-label="Animated Christmas workshop"></video>
+<div class="vignette"></div>
+<header class="top"><div class="controls"><button class="control" id="toggle">⏸ Pause</button><button class="control" id="clue" aria-pressed="false">✨ Show Clues</button><button class="control" id="help" aria-label="How to play">❔</button></div></header>
+<div id="targets" aria-label="Clickable Christmas vocabulary objects"></div>
+<div class="prompt">👆 Touch a character or a Christmas object!</div>
+<div class="progress">⭐ Found <span id="count">0 / 16</span></div>
+<div class="completion" id="completed">🎉 Amazing! You found all 16 words!</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="vword"><section class="card"><button class="exit" id="exit" aria-label="Close vocabulary card">×</button><div class="card-kicker">✦ CHRISTMAS VOCABULARY ✦</div><div class="illustration" aria-hidden="true"><img id="cardImage" alt="" draggable="false" /></div><h1 class="word" id="vword"></h1><div class="translation" id="vzh"></div><div class="sentence-box"><div class="sentence" id="vexample"></div><div class="sentence-zh" id="vexamplezh"></div></div><div class="card-tools"><button class="speak" id="listen">🔊 Listen</button><button class="speak" id="speakexample">▶ Sentence</button></div></section></div>
+</main></div>
+<script>
+'use strict';
+// x, y, width, height are percentages of the actual 16:9 video frame.
+// Make large/background objects early; smaller foreground objects last so taps work correctly.
+const vocabulary=[
+{id:'tree',en:'Christmas Tree',zh:'聖誕樹',emoji:'🎄',example:'The Christmas tree has colorful lights.',exampleZh:'聖誕樹上有五顏六色的燈。',x:7.3,y:21,w:13,h:40},
+{id:'santa',en:'Santa Claus',zh:'聖誕老人',emoji:'🎅',example:'Santa Claus is checking his list.',exampleZh:'聖誕老人正在檢查他的清單。',x:34.2,y:44,w:22,h:44},
+{id:'elf',en:'Elf',zh:'小精靈',emoji:'🧝',example:'The elf is wrapping a present.',exampleZh:'小精靈正在包裝禮物。',x:21,y:54,w:25,h:55},
+{id:'nutcracker',en:'Nutcracker',zh:'胡桃鉗士兵',emoji:'💂',example:'The nutcracker is holding many gifts.',exampleZh:'胡桃鉗士兵正抱著許多禮物。',x:76.3,y:42,w:16,h:46},
+{id:'snowman',en:'Snowman',zh:'雪人',emoji:'⛄',example:'The snowman is holding a present.',exampleZh:'雪人正拿著一份禮物。',x:66.7,y:50.5,w:16,h:35},
+{id:'rudolph',en:'Rudolph',zh:'紅鼻子馴鹿',emoji:'🦌',example:'Rudolph has a shiny red nose.',exampleZh:'魯道夫有一個閃亮的紅鼻子。',x:92.5,y:50,w:14,h:35},
+{id:'gingerbread',en:'Gingerbread Man',zh:'薑餅人',emoji:'🍪',example:'The gingerbread man is holding a ribbon.',exampleZh:'薑餅人正拿著緞帶。',x:51,y:72,w:14,h:42},
+{id:'sleigh',en:'Sleigh',zh:'雪橇',emoji:'🛷',example:'The sleigh is red and gold.',exampleZh:'雪橇是紅色和金色的。',x:89,y:70,w:20,h:21},
+{id:'gift',en:'Gift / Present',zh:'禮物',emoji:'🎁',example:'The elf is wrapping a Christmas gift.',exampleZh:'小精靈正在包裝一份聖誕禮物。',x:26,y:77,w:16,h:19},
+{id:'wreath',en:'Wreath',zh:'聖誕花圈',emoji:'🌿',example:'There is a wreath above the fireplace.',exampleZh:'壁爐上方有一個聖誕花圈。',x:43.2,y:15.7,w:10,h:18},
+{id:'toy',en:'Toy',zh:'玩具',emoji:'🧸',example:'There are many toys in the workshop.',exampleZh:'工作坊裡有許多玩具。',x:4,y:51.6,w:6.9,h:13},
+{id:'stocking',en:'Stocking',zh:'聖誕襪',emoji:'🧦',example:'The Christmas stocking hangs by the fireplace.',exampleZh:'聖誕襪掛在壁爐旁。',x:50.7,y:32,w:7.5,h:20},
+{id:'candy',en:'Candy Cane',zh:'拐杖糖',emoji:'🍬',example:'The candy cane is red and white.',exampleZh:'拐杖糖是紅白相間的。',x:77.8,y:93,w:14.7,h:11.5},
+{id:'ornament',en:'Ornament',zh:'聖誕裝飾球',emoji:'🔴',example:'The ornaments are colorful.',exampleZh:'這些聖誕裝飾球五顏六色。',x:13,y:78.5,w:17,h:15},
+{id:'star',en:'Star',zh:'星星',emoji:'⭐',example:'The star is on the Christmas tree.',exampleZh:'星星在聖誕樹上。',x:8.5,y:17,w:4.5,h:7},
+{id:'bell',en:'Bell',zh:'鈴鐺',emoji:'🔔',example:'The elf has a little bell on his hat.',exampleZh:'小精靈的帽子上有一個小鈴鐺。',x:6.6,y:46.5,w:6.5,h:12}
+];
+const film=document.getElementById('film');const scene=document.getElementById('scene');const modal=document.getElementById('modal');const list=document.getElementById('targets');const seen=new Set();let current=null;let resumeAfterCard=false;let lastFocus=null;
+// Put small targets above large ones for precision; keep all 16 accessible by keyboard.
+[...vocabulary].sort((a,b)=>(b.w*b.h)-(a.w*a.h)).forEach(word=>{
+  const b=document.createElement('button');b.type='button';b.className='spot';b.setAttribute('aria-label',`Explore ${word.en}`);b.title=`Explore ${word.en}`;
+  b.style.left=word.x+'%';b.style.top=word.y+'%';b.style.width=word.w+'%';b.style.height=word.h+'%';b.onclick=()=>openCard(word,b);list.appendChild(b);
+});
+const toggle=document.getElementById('toggle');const updatePlay=()=>{toggle.textContent=film.paused?'▶ Play':'⏸ Pause'};
+toggle.onclick=()=>{if(film.paused){const p=film.play();if(p&&p.catch)p.catch(()=>{});}else film.pause();updatePlay()};
+film.addEventListener('play',updatePlay);film.addEventListener('pause',updatePlay);
+film.addEventListener('error',()=>{film.style.display='none';toggle.disabled=true;toggle.textContent='🖼 Still Image';});
+function voice(text){if(!('speechSynthesis' in window)){alert('Speech is not supported by this browser.');return;}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;u.pitch=1;const voices=window.speechSynthesis.getVoices();u.voice=voices.find(v=>/^en(-|_)/i.test(v.lang)&&/Google|Microsoft|Samantha/i.test(v.name))||voices.find(v=>/^en(-|_)/i.test(v.lang))||null;window.speechSynthesis.speak(u);}
+function openCard(word,el){lastFocus=el;current=word;document.getElementById('cardImage').src='card-images/'+word.id+'.webp';document.getElementById('vword').textContent=word.en;document.getElementById('vzh').textContent=word.zh;document.getElementById('vexample').textContent=word.example;document.getElementById('vexamplezh').textContent=word.exampleZh;modal.classList.add('open');resumeAfterCard=!film.paused;if(resumeAfterCard)film.pause();seen.add(word.id);document.getElementById('count').textContent=seen.size+' / 16';document.getElementById('exit').focus();}
+function closeCard(){if(!modal.classList.contains('open'))return;modal.classList.remove('open');if('speechSynthesis'in window)window.speechSynthesis.cancel();if(resumeAfterCard){let p=film.play();if(p&&p.catch)p.catch(()=>{});}resumeAfterCard=false;lastFocus?.focus();if(seen.size===16){const c=document.getElementById('completed');c.classList.add('show');setTimeout(()=>c.classList.remove('show'),4500);}}
+document.getElementById('exit').onclick=closeCard;modal.addEventListener('click',e=>{if(e.target===modal)closeCard()});window.addEventListener('keydown',e=>{if(e.key==='Escape')closeCard();if(e.key==='Tab'&&modal.classList.contains('open')){const focus=[...modal.querySelectorAll('button')];if(e.shiftKey&&document.activeElement===focus[0]){e.preventDefault();focus.at(-1).focus()}else if(!e.shiftKey&&document.activeElement===focus.at(-1)){e.preventDefault();focus[0].focus()}}});
+document.getElementById('listen').onclick=()=>current&&voice(current.en==='Gift / Present'?'Gift. Present.':current.en);
+document.getElementById('speakexample').onclick=()=>current&&voice(current.example);
+document.getElementById('clue').onclick=()=>{scene.classList.toggle('clues-on');let val=scene.classList.contains('clues-on');document.getElementById('clue').textContent=val?'✨ Hide Clues':'✨ Show Clues';document.getElementById('clue').setAttribute('aria-pressed',String(val));};
+document.getElementById('help').onclick=()=>alert('Christmas Word Hunt!\n\nTouch any character or Christmas object to open a word card.\nTap Listen to hear the word and Sentence to hear the example.\nShow Clues highlights all 16 clickable objects.\n\n點選人物或物品，開啟英文單字卡；按喇叭聽發音。\n「Show Clues」可以顯示所有隱藏的點擊區域。');
+</script></body></html>
